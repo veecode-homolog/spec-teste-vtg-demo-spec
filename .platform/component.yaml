@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "spec-teste-vtg-demo-spec"
+  description: "Artifacts generator via Spec."
+  annotations:
+    github.com/project-slug: veecode-homolog/spec-teste-vtg-demo-spec
+    backstage.io/techdocs-ref: dir:..
+    github.com/workflows: publish.yml,remove.yml
+    kong-manager/service-name: app.spec-teste-vtg-demo-spec.80
+    kong-manager/instance: cluster-teste-vtg-demo-spec
+    kong-manager/spec : openapi-swagger.yaml
+spec:
+  type: devops
+  lifecycle: experimental
+  owner: "group:default/admin"
+  providesApis:
+    - spec-teste-vtg-demo-spec
